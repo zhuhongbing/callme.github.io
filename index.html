@@ -1,163 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photogenic</title>
-    <link rel="stylesheet" href="./css/index.css">
+  <meta charset="utf-8">
+	<title>Woop - Portfolio Template</title>
+	<meta name="description" content="" />
+  	<meta name="keywords" content="" />
+	<meta name="robots" content="" />
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/960.css" rel="stylesheet" type="text/css" />
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="http://www.5imoban.net/download/jquery/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/smooth-scroll.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="cform.js"></script>
+	
+<script type="text/javascript"> // sticky nav bar 
+  $(document).ready(function(){
+    $("nav").sticky({topSpacing:0});
+  });
+</script>
+
+<script type="text/javascript"> // fancybox
+$(document).ready(function() {
+
+	/* This is basic - uses default settings */
+	
+	$("a.single_image").fancybox();
+	
+	/* Using custom settings */
+	
+	$("a#inline").fancybox({
+		'hideOnContentClick': true
+	});
+
+	/* Apply fancybox to multiple items */
+	
+	$("a.group").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+	});
+	
+});
+</script>
+	
 </head>
-<body>
-    <!-- 页眉 导航栏 -->
-    <!-- 采用fixed  头像采用嵌套absolute -->
-    <!-- 导航栏float：left -->
-    <header>
-        <div class="top-img">
-            <a href="logo-nav">
-                <img src="./css/images/头像.jpg" alt="logo">
-            </a>
-        </div>
 
-        <div class="nav-container">
-            <ul class="ul-nav">
-                <li class="li-nav">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="li-nav">
-                    <a class="nav-link" href="my treasure.html">treasure</a>
-                </li>
-                <li class="li-nav">
-                    <a class="nav-link" href="my life.html">my life</a>
-                </li>
-                <li class="li-nav">
-                    <a class="nav-link" href="contact.html">contact</a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <!-- 页眉 导航栏 -->
+<div class="topbar"></div> <!-- top bar -->
 
-    <!-- 介绍栏 -->
-    <!-- 采用横向flex布局   flex-direction：row -->
-    <div class="slider-container">
-        <div class="left-slider">
-            <div id="left">
-                <h1>Hello</h1>
-                <h2>I'm Tian HuiHui</h2>
-                <p>
-                    A New Web Developer,Form Zuel
-                </p>
-                <div>
-                    <a href="./about.html">Read More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 图片采用背景图片方式ha -->
-        <div class="right-slider">
-            <div class="bg-img1"></div>
-        </div>
-    </div>
-    <!-- 介绍栏 -->
-    
-      
-    <!-- =主界面 -->
-    <div class="main">
-        <!-- 横向flex布局 -->
-        <div class="introduction flex1">
-            <h3 class="title-style">生活碎片</h3>
-                <p> 学习 健身 楼外的蒹葭 湖边的落日 身边的她<br>
-                    珍惜当下 追那一轮落日 
-                </p>
-        </div>
-
-        <!-- 生活图片采用grid布局  其中第三个子div占两行 -->
-        <div class="photo grid">
-            <div class="backround-img">
-                <img src="./css/images/index-1.jpg" alt="">
-            </div>
-            <div class="backround-img">
-                <img src="./css/images/index-2.jpg" alt="">
-            </div>
-            <div class="backround-img1">
-                <img src="./css/images/index-3.jpg" alt="">
-            </div>
-            <div class="backround-img">
-                <img src="./css/images/index-4.jpg" alt="">
-            </div>
-            <div class="backround-img">
-                <img src="./css/images/index-5.jpg" alt="">
-            </div>
-        </div>
-
-        <!-- （横向）flex布局中嵌套（纵向）flex布局 -->
-        <div class="statistics flex">
-            <div class="counter flex1">
-                <div>
-                    <img src="./css/images/index-学校.png" alt="Happy">
-                </div>
-                <h1>中南财经政法大学</h1>              
-                <p>信息与安全工程学院-信管2001</p>
-            </div>
-            <div class="counter flex1">
-                <div>
-                    <img src="./css/images/index-身份.png" alt="Happy">
-                </div>
-                <h1>郭烁</h1>              
-                <p>湖北人 生于2002年<br>
-                    摄影 美食爱好者 旅游  风景 
-                </p>
-            </div>
-        </div>
-    </div>
+<div id="intro">
+	<div class="title">
+		<h1>hello<br />
+		<span class="small">my name is</span><br />
+		<span class="name">john doe</span><br />
+		<span class="intro_line"></span><span class="amp">&</span><span class="intro_line"></span><br />
+		<span class="small">i'm a web designer</span></h1>
+	</div> <!-- end .title -->
+</div> <!-- end #intro -->
 
 
-    <!-- 页脚 -->
-    <footer class="b4">
-        <!-- 第一行采用 横向的flex布局 -->
-        <div class="header-footer flex">
-            <h1> Contact Me</h1>
-            <div class="link-footer">
-                <a href=""><img src="./css/images/index-微信.png" alt=""></a>
-                <a href=""><img src="./css/images/index-QQ.png" alt=""></a>
-                <a href=""><img src="./css/images/index-github.png" alt=""></a>
-            </div>
-        </div>
+<nav>
+	<ul>
+		<li><a href="#intro">home</a></li>
+		<li><a href="#work">work</a></li>
+		<li><a href="#services">services</a></li>
+		<li><a href="#about">about</a></li>
+		<li><a href="#contact">contact</a></li>
+	</ul>
+</nav> <!-- end nav -->
 
-        <!-- 横向flex布局  3个单元格 -->
-        <div class="main-footer flex">
-            <div class="phone container-footer">
-                <div>
-                    <h5>Phone</h5>
-                    <h5><a href="">15926072152</a></h5>
-                </div>
 
-                <div class="email">
-                    <h5>E-mail</h5>
-                    <h5> <a href="">3434518927@qq.com</a></h5>
-                </div>
-            </div>
-            <div class="support-link container-footer">
-                <h2>Support Links</h2>
-                <ul>
-                    <li><a href="www.github.com">Github</a></li>
-                    <li><a href="www.zuel.edu.cn">Zuel</a></li>
-                    <li><a href="./contact.html">Contact me</a></li>
-                    <li><a href="">Support</a></li>
-                </ul>
-            </div>
-            <div class="address container-footer">
-                <h5>中南财经政法大学 <br>
-                    信息与安全工程学院, <br> 湖北省 武汉市.</h5>
-                <h5 class="date">Everyday: <span> 7 AM - 8 PM</span></h5>
-            </div>
-        </div>
+<div id="work">
+	<div class="container_16">
+		
+		<div class="subheader">
+			<div class="subheader_line"></div><h2>recent work</h2><div class="subheader_line"></div>
+		</div>
+		
+		<div class="gallery">
+			<div class="grid_5">
+				<a href="img/example_img.png" class="single_image"><div class="screenshot1 ss"></div></a>
+				<p>Website name<br />
+				<span class="ss_text">Web Design / Development</span>
+				</p>
+			</div>
+			<div class="grid_6">
+				<a href="img/example_img.png" class="single_image"><div class="screenshot2 ss center"></div></a>
+				<p>Website name<br />
+				<span class="ss_text">Web Design / Development</span>
+				</p>
+			</div>
+			<div class="grid_5">
+				<a href="img/example_img.png" class="single_image"><div class="screenshot3 ss"></div></a>
+				<p>Website name<br />
+				<span class="ss_text">Web Design / Development</span>
+				</p>
+			</div>
+		
+			<div class="spacer">&nbsp;</div>
+		
+			<div class="grid_5">
+				<a href="img/example_img.png" class="single_image"><div class="screenshot4 ss"></div></a>
+				<p>Website name<br />
+				<span class="ss_text">Web Design / Development</span>
+				</p>
+			</div>
+			<div class="grid_6">
+				<a href="img/example_img.png" class="single_image"><div class="screenshot5 ss center"></div></a>
+				<p>Website name<br />
+				<span class="ss_text">Web Design / Development</span>
+				</p>
+			</div>
+			<div class="grid_5">
+				<a href="img/example_img.png" class="single_image"><div class="screenshot6 ss"></div></a>
+				<p>Website name<br />
+				<span class="ss_text">Web Design / Development</span>
+				</p>
+			</div>
+		</div><!-- end .gallery -->
+		
+	</div> <!-- end .container_16 -->
+</div> <!-- end #work -->
 
-        <!-- 版权 -->
-        <div class="copy-footer">
-            <p>&copy;2022 my life. All rights reserved. Design by TianHuiHui</p>
-        </div>
-    </footer>
-    <!-- 页脚 -->
-</body>
-</html>
+<div class="work_bg_bottom"></div>
+
+<div id="services">
+	<div class="container_16">
+	
+		<div class="subheader">
+			<div class="subheader_line"></div><h2>services</h2><div class="subheader_line"></div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="serv_icons">
+			<div class="grid_4">
+				<div class="serv_icon1"></div>
+				<h3>design</h3>
+				<p>I have traced the Rebel spies to her. Now she is my only link to finding their secret base. I want to come with you to Alderaan.</p>
+			</div>
+		
+			<div class="grid_4">
+				<div class="serv_icon2"></div>
+				<h3>development</h3>
+				<p>I have traced the Rebel spies to her. Now she is my only link to finding their secret base. I want to come with you to Alderaan.</p>
+			</div>
+		
+			<div class="grid_4">
+				<div class="serv_icon3"></div>
+				<h3>identity</h3>
+				<p>I have traced the Rebel spies to her. Now she is my only link to finding their secret base. I want to come with you to Alderaan.</p>
+			</div>
+			
+			<div class="grid_4">
+				<div class="serv_icon4"></div>
+				<h3>wordpress</h3>
+				<p>I have traced the Rebel spies to her. Now she is my only link to finding their secret base. I want to come with you to Alderaan.</p>
+			</div>
+		</div> <!-- end .serv_icons -->
+		
+	</div> <!-- end .container_16 -->
+</div> <!-- end #services -->
+
+<div class="services_bg_bottom"></div>
+
+<div id="about">
+	<div class="container_16">
+	
+		<div class="subheader">
+			<div class="subheader_line"></div><h2>about</h2><div class="subheader_line"></div>
+		</div>
+	
+	<div class="grid_5">
+		<div class="about_pic"></div>
+		<div class="social">
+			<ul>
+				<li><a href="#"><div class="twitter sprite"></div></a></li>
+				<li><a href="#"><div class="facebook sprite"></div></a></li>
+				<li><a href="#"><div class="linkedin sprite"></div></a></li>
+				<li><a href="#"><div class="dribble sprite"></div></a></li>
+			</ul>
+		</div> <!-- end .social -->
+	</div> <!-- end .grid_5 -->
+	
+	<div class="grid_6">
+			<div class="about_copy">
+			<h4>Who am I?</h4>
+			<p>Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything.</p>
+			<p>There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. Look, I ain't in this for your revolution, and I'm not in it for you.</p>
+			<p>I want to come with you to Alderaan. There's nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me. Still, she's got a lot of spirit. I don't know, what do you think?</p>
+		</div> <!-- end .about_copy -->
+	</div> <!-- end .grid_6 -->
+	
+	<div class="grid_5">
+		<div class="skills">
+			<h4>Skills</h4>
+			<ul>
+				<li><div class="skill1"><p>Photoshop</p></div></li>
+				<li><div class="skill2"><p>Illustrator</p></div></li>
+				<li><div class="skill3"><p>HTML/CSS</p></div></li>
+				<li><div class="skill4"><p>Javascript</p></div></li>
+				<li><div class="skill5"><p>Wordpress</p></div></li>
+				<li><div class="skill6"><p>PHP/MySQL</p></div></li>
+			</ul>
+		</div> <!-- end .skills -->
+	</div> <!-- end .grid_5 -->
+	
+	</div> <!-- end .container_16 -->
+</div> <!-- end #about -->
+
+<div class="about_bg_bottom"></div>
+
+<div id="contact">
+	<div class="container_16">
+	
+		<div class="subheader">
+			<div class="subheader_line"></div><h2>contact</h2><div class="subheader_line"></div>
+		</div>
+		
+		<div class="grid_7">
+			<div class="contact_form">
+				<h4>Get in touch</h4>
+				<form method="post">
+					<input type="text" name="Name" id="name" value="Name" onfocus="this.value = this.value=='Name'?'':this.value;" onblur="this.value = this.value==''?'Name':this.value;" />
+					<input type="text" name="Email" id="email" value="Email" onfocus="this.value = this.value=='Email'?'':this.value;" onblur="this.value = this.value==''?'Email':this.value;" />
+					<input type="text" value="Subject" id="subject" onfocus="this.value = this.value=='Subject'?'':this.value;" onblur="this.value = this.value==''?'Subject':this.value;" />
+					<textarea name="Message" id="body" onfocus="this.value = this.value=='Message'?'':this.value;" onblur="this.value = this.value==''?'Message':this.value;">Message</textarea>
+					<input type="submit" name="submit" id="submit" value="send" class="submit-button" onClick="return check_values();" />
+				</form>
+				<div id="confirmation" style="display:none; position: relative; z-index: 600; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px; color: #4e4e4e;"></div>
+			</div> <!-- end .contact_form -->
+				
+		</div> <!-- end .grid_7 -->
+				
+		<div class="grid_9">
+		
+			<div class="contact_info">
+				<h4>Contact Information</h4>
+				<div class="grid_4 alpha">
+					<p><img src="img/icn_phone.png" alt="" /> +351 123 456 789</p>
+					<p><img src="img/icn_mail.png" alt="" /> youremail@yoursite.com</p>
+				</div>
+				<div class="grid_4 omega">
+					<p><img src="img/icn_address.png" alt="" /> Fifth Avenue<br />
+					<span class="address">767 5th Ave, New York,</span><br />
+					<span class="address">NY 10153</span></p>
+				</div>
+			</div> <!-- end .contact_info -->
+		
+			<div class="map">
+				<iframe class="map_frame" width="506" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.pt/maps?f=q&amp;source=s_q&amp;hl=pt-PT&amp;geocode=&amp;q=fifth+avenue+767+ny&amp;aq=&amp;sll=39.639538,-7.849731&amp;sspn=9.792035,19.753418&amp;ie=UTF8&amp;hq=&amp;hnear=767+5th+Ave,+New+York,+10022,+United+States&amp;t=m&amp;ll=40.763901,-73.973179&amp;spn=0.013002,0.043344&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br />
+			</div> <!-- end .map -->
+			
+		</div> <!-- end .grid_9 -->
+		
+	</div> <!-- end .container_16 -->
+</div> <!-- end #contact -->
+
+<div class="contact_bg_bottom"></div>
+
+<footer>
+	<p>&copy; 2012 All rights reserved</p>
+</footer>
